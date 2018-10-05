@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formulaires HTML</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css" />
+	<head>
+	
+	<body>
+		<h1>Questionnaire de satisfaction</h1>
+		<form method="post" action="traitement.php">
+			<fieldset id="section-1">
+                <legend>Informations personnelles :</legend>
+                <label for="prenom">Entrez votre prénom :</label>
+                <input type="text" name="prenom" id="prenom"><br>
+                <label for="nom">Entrez votre nom :</label>
+                <input type="text" name="nom" id="nom"><br>
+                <label for="mail">Adresse mail :</label>
+                <input type="email" name="mail" id="mail"><br>
+           </fieldset>
+			
+			<fieldset id="section-2">
+                <legend>Votre château préféré :</legend>
+				Châteaux<br>
+                <input type="checkbox" name="château" value="Amboise" id="Amboise">
+                <label for="Amboise">Amboise</label>
+				<input type="checkbox" name="château" value="Azay-le-rideau" id="Azay-le-rideau">
+                <label for="Azay-le-rideau">Azay-le-rideau :</label>
+                <input type="checkbox" name="château" value="Chambord" id="Chambord">
+				<label for="Chambord">Chambord :</label>
+				<input type="checkbox" name="château" value="Chenonceau" id="Chenonceau">
+				<label for="Chenonceau">Chenonceau :</label>
+				<input type="checkbox" name="château" value="Langeais" id="Langeais">
+                <label for="Langeais">Langeais :</label>
+           </fieldset>
+			<input type="submit" value="Envoyer le formulaire !">
+			
+<!-- 			<label for="password">Entrez votre mot de passe: </label>		
+			<input type="pswd" name="pswd" id="pswd"><br><br> -->
+
+		<!-- 	<label for="naissance">Votre date de naissance: </label>		
+			<input type="date" name="naissance" id="naissance"><br><br> -->
+			
+			<!-- <label for="mail">Votre e-mail: </label>		
+			<input type="email" name="mail" id="mail"><br><br> -->
+			
+			<!-- <label for="url">URL de votre site: </label>		
+			<input type="url" name="url" id="url"><br><br> -->
+			
+<!-- 			<label for="number">Entrez un nombre: </label>		
+			<input type="number" name="url" id="number"><br><br> -->
+			
+		
+		
+			
+			<label for="presentation">Présentation: </label>
+			<textarea name="prez" id="presentation"></textarea><br><br>
+			
+			<input type="submit" value="Envoyer">
+		</form>
+	</body>
+</html>

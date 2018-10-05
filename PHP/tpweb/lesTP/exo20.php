@@ -1,6 +1,5 @@
-<html>
-<body>
-<h1>Lecture et écriture dans un fichier</h1>
+<HTML>
+<h1>Fichier csv et affichage dans un tableau</h1>
 <br>
 
 
@@ -14,14 +13,10 @@
 		echo "</pre>";
 		}
 	
-	$nom = $_GET['nom'];
-	$prenom = $_GET['prenom'];
-	$profil = $_GET["profil"];
 	
 	
-	$file="script21.csv";
+	$file="script05.csv";
 
-	
 	if (file_exists($file))
 		{
 		$pointeur=fopen($file,"a");
@@ -29,27 +24,17 @@
 		}
 	else
 		{
-		$pointeur=fopen($file,"r+");
+		$pointeur=fopen($file,"r");
 		fclose($pointeur);
 		}
-	
-	
-	
-	
-	
+
+	$i=0;
 	$pointeur=fopen($file,"r");
 
-	
-	
 	$tableau = new ArrayObject();
 	
 	while (!feof($pointeur))
 		{
-		fputs($pointeur, $nom);
-		fputs($pointeur, ",");
-		fputs($pointeur, $prenom);
-		fputs($pointeur, ",");
-		fputs($pointeur, $profil);
 		$tableau->append(fgetcsv($pointeur, ","));
 		}
 		
@@ -65,7 +50,4 @@
 		
 		
 		?>
-
-
-</body>
-</html> 
+</HTML>
