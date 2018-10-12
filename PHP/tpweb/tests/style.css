@@ -1,0 +1,19 @@
+html, body {
+	height: 100%;
+}
+
+#content {
+max-width:960px;
+position:relative;
+padding: 10px 10px 10px 10px;
+margin: 10px 10px 10px 10px;
+}
+#gauche {
+width:300px;
+position:absolute;
+}
+#droite {
+margin-left:500px;
+min-height:150px;
+padding: 10px 10px 10px 10px;
+}
