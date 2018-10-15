@@ -1,0 +1,18 @@
+<?php
+if(isset($_SESSION)){
+	echo"$_SESSION['login']";
+	echo"$_SESSION['mdp']";
+	if(isset($_POST["Deconnexion"])){
+		header("Location: exo29gestionsession")
+	}
+}
+else{
+	header("Location: exo29gestionsession.php")
+}
+
+?>
+
+<html>
+<h1>Bienvenue<h1>
+<input type="submit" name="Deconnexion" value="Deconnexion">
+<html>
