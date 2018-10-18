@@ -1,13 +1,5 @@
 <?php
-
-
-
-
-
-
 ?>
-
-
 <HTML>
 <h1>Bienvenue étudiant</h1>
 <p>Ici, vous pouvez voter pour chaque UE que vous avez suivis. Vos notes seront prises en compte par les professeurs concernés.</p>

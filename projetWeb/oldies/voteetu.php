@@ -1,5 +1,12 @@
 <?php
+
+
+
+
+
+
 ?>
+
 
 <HTML>
 <h1>Bienvenue étudiant</h1>
