@@ -1,6 +1,9 @@
+<?php
+	session_start();
+?>
 <html>
 <head>
-<title>Select et Insert MySQL</title>
+<title>Bienvenue utilisateur</title>
 </head>
 
 <body>

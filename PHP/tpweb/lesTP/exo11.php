@@ -22,6 +22,17 @@
 			}
 		
 		
+		echo "Autre exo";
+		$a=True;$b=True;
+
+		echo "\$a =".intval($a)." \$b=".intval($b)."<br>";
+		for ($i=1;$i<4;$i++) {
+			$aa=$a;
+			$a=$b;
+			$b=!$aa;
+			echo "\$a =".intval($a)." \$b=".intval($b)."<br>";
+}//for
+
 		
 		
 		?>
