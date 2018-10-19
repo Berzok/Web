@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-				<td><input type='submit' name='plus' value='Ajouter'></td>
+				<td><input type='submit' name='plus' value='Exécution'></td>
 			</tr>
 		
 		</table>
@@ -39,7 +39,7 @@ $bd="canarticheau"; //à faire
 
 //connexion à la base de donnees
 mysqli_select_db($connexion,$bd)
-or die("Impossible d'accèder à la base de données");
+or die("Impossible d'accéder à la base de données");
 
 $tables="Hamster_Dame"; //à faire
 $id = "";
