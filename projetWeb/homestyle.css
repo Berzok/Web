@@ -1,0 +1,112 @@
+#form-container
+{
+    width:400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:15%;
+}
+
+html
+{
+	background-image: url("pics/background2.png");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+form
+{
+    width:90%;
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#form-container h1
+{
+	font-family: Calibri;
+    text-align: center;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    margin-bottom: 35px;
+}
+
+#form-container label
+{
+	font-family: Calibri;
+}
+
+input[type=text], input[type=password]
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+input[type=submit]
+{
+    background: #FE3838;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #FE3838;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Calibri;
+}
+
+input[type=submit]:hover
+{
+    background: rgb(68,166,38);
+	transition-duration: 0.5s;
+    border: 1px solid #53af57;
+}
+
+#header-content
+{
+	background-color: #191919;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+	height: 60px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#titre
+{
+	font-size: 20px;
+	text-align: left;
+	margin-left: 30px;
+	margin-top: 18px;
+	color: white;
+	font-family: Calibri;
+}
+
+#home
+{
+	text-decoration: none;
+}
+
+#logo
+{
+	width: 80px;
+	float: left;
+}
+
+#erreur
+{
+	font-family: Calibri;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 0;
+}

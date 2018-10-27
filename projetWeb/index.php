@@ -1,34 +1,50 @@
 <?php
 setcookie("cookie", "php5");
 ?>
-<HtMl>
-<h1>Page de connexion</h1>
-<br>
-
-
-
-<hr><fieldset><legend> Connexion </legend><table width='300'><form name='Demande' action='' method='post'<tr>
-      <td>Nom d'utilisateur  </td>
-	  <td><input name='nom' type='text' required /></td>
-	  </tr><tr>
-	  <tr><td>Mot de passe</td>
-			<td><input name='password' type='password' required ></td>
-		</tr><tr>
-		
-		<td>
-		<input name='ok' type='submit' value='Valider'>
-		</td>
-	</tr>
-</tr>
-</form>
-</table>
-</fieldset>
-</HtMl>
-
+<html lang="fr">
+<head>
+	<title>Évaluation des enseignements - Connexion</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="homestyle.css"/>
+</head>
+<body>
+<div id="header-content">
+		<a id="home" href="index.php"><h1 id="titre">Évaluation des enseignements</h1></a>
+</div>
+<div id="form-container">
+	<form action='' method='post'<tr>
+		<img id="logo" src="pics/logo.png"/>
+		<br/>
+		<h1>Connexion</h1>
+		<label><b>Nom d'utilisateur</b></label><input name='nom' type='text' required />
+		<br/>
+		<label><b>Mot de passe</b></label><input name='password' type='password' required />
+		<br/>
+		<input name='ok' type='submit' value='Connexion'/>
+		<?php
+		if(isset($_GET["err"]))
+		{
+			echo "<p id='erreur'>Le nom d'utilisateur ou le mot de passe est incorrect.</p>";
+		}
+		?>
+	</form>
+</div>
+</body>
+</html>
 <?php
+session_start();
+if(!isset($_SESSION['login']))
+{
+	session_destroy();
+}
+else
+{
+	header('Location: login.php');
+}
+
 $dir_name = "data/"; //Nom du dossier contenant les fichiers csv
 
-if(isset($_POST["nom"], $_POST["nom"]))
+if(isset($_POST["nom"], $_POST["password"]))
 {
 	if(!empty($_POST["nom"]) and !empty($_POST["password"]))
 	{
@@ -56,30 +72,41 @@ if(isset($_POST["nom"], $_POST["nom"]))
 
 						if($login == $t[0] and $mdp == $t[1])
 						{
-							if($file == "data/id-admin.csv" or $file == "data/id-profs.csv" or $file == "data/id-student.csv") //Permet de vérifier qu'on parcourt bien un des fichiers contenant les id et mots de passe
+							if($file == "data/id-admin.csv")// or $file == "data/id-profs.csv" or $file == "data/id-student.csv") //Permet de vérifier qu'on parcourt bien un des fichiers contenant les id et mots de passe
 							{
 								fclose($pointeur); //Fermeture du fichier parcouru
 								closedir($dir); //Fermeture du dossier
 								session_start();
 								$_SESSION['login'] = $login;
-								header("Location: intranet.php");
+								$_SESSION['role'] = "admin";
+								header("Location: login.php");
 							}
-							else
+							elseif($file == "data/id-profs.csv")
 							{
 								fclose($pointeur); //Fermeture du fichier parcouru
 								closedir($dir); //Fermeture du dossier
-								header("Location: index.php?err=1");
+								session_start();
+								$_SESSION['login'] = $login;
+								$_SESSION['role'] = "prof";
+								header("Location: login.php");
+							}
+							elseif($file == "data/id-student.csv")
+							{
+								fclose($pointeur); //Fermeture du fichier parcouru
+								closedir($dir); //Fermeture du dossier
+								session_start();
+								$_SESSION['login'] = $login;
+								$_SESSION['role'] = "etu";
+								header("Location: login.php");
 							}
 						}
 					}
 				}
 			}
 		}
+		header('Location: index.php?err=a');
+		exit;
 	}
-}
-if(isset($_GET["err"]))
-{
-	echo "Le nom d'utilisateur ou le mot de passe est incorrect.";
 }
 
 
