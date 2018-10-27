@@ -91,6 +91,12 @@ input[type=submit]:hover
 	font-family: Calibri;
 }
 
+#titre:hover
+{
+    color: #FE3838;
+    transition-duration: 0.5s;
+}
+
 #home
 {
 	text-decoration: none;

@@ -6,6 +6,7 @@ setcookie("cookie", "php5");
 	<title>Évaluation des enseignements - Connexion</title>
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" href="homestyle.css"/>
+	<link rel="icon" type="image/png" href="pics/icon.png" />
 </head>
 <body>
 <div id="header-content">
