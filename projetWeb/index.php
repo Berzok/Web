@@ -7,6 +7,7 @@ setcookie("cookie", "php5");
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" href="homestyle.css"/>
 	<link rel="icon" type="image/png" href="pics/icon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
 <div id="header-content">
