@@ -12,7 +12,6 @@ else
 ?>
 <html lang="fr">
 <head>
-	<title>Évaluation des enseignements - Connexion</title>
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" href="style.css"/>
 	<link rel="icon" type="image/png" href="pics/icon.png" />
