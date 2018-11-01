@@ -13,9 +13,9 @@ function aVote($login)
 
 		$extension = new SplfileInfo($file);
 
-		if($extension->getExtension() == "txt")
+		if($extension->getExtension() == "csv")
 		{
-			if($file == $dir_name."vote-".$login.".txt")
+			if($file == $dir_name."vote-".$login.".csv")
 			{
 				$vote = true;
 			}
