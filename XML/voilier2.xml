@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="Voiliers-v1.xsl"?>
+
+
+<voiliers>
+	<voilier>
+		<nom>Grizzly Barber Shop</nom>
+		<annee>2007</annee>
+		<architecte>Olivier Philippot</architecte>
+		<longueur>12m</longueur>
+		<photo adresse="https://static.routedurhum.com/s3fs-public/styles/medium/public/boats/Robin-Marais.Normandy-channel-race.depart.21.jpg?itok=XUZnglvx"></photo>
+		<skipper>
+			<nom_skipper>Cédric DE KERVENOAL</nom_skipper>
+			<texte>
+				Avocat à <nomgeo>Paris</nomgeo>, Cédric de Kervenoael a, de fait, une vie professionnelle bien
+				remplie, mais son CV nautique n’en demeure pas moins garni.
+				Jugez plutôt ; outre un titre de champion du RORC et un titre de champion
+				du monde corinthien (amateur) en Melges 24, le skipper a également à peu près
+				remporté tout ce qu’il est possible de gagner en Class8, au côté de
+				Jean-François Cruette. « Sauf qu’au bout d’un moment, j’en ai eu marre de
+				tourner entre trois bouées. J’ai voulu refaire du large », explique le Parisien
+				qui a passé une large partie de son enfance à naviguer au Havre de
+				<nomgeo>Rothéneuf</nomgeo>,	à mi-chemin entre <nomgeo>Saint-Malo</nomgeo>
+				et la <nomgeo>pointe du Grouin</nomgeo>,	assistant ainsi	également à chaque
+				départ de la Route du Rhum-Destination <nomgeo>Guadeloupe</nomgeo>.
+				« Je me souviens d’un mec, en 1978, qui était parti en blazer bleu marine
+				et en pantalon blanc. Improbable », note Cédric qui a ensuite, à l’occasion
+				de trois éditions, procédé aux contrôles des bateaux pour le compte de l’UNCL,
+				avant de décider de faire le grand saut à son tour.
+				« J’ai acheté un Class40 (un LNM40 construit en 2007, N.D.L.R.) que
+				j’ai mis six ans à retaper », précise l’homme, passionné de course et
+				d’histoire qui fut, par le passé, également propriétaire du Tour
+				de <nomgeo>France</nomgeo> à la Voile au début des années 2000 avant de le
+				revendre aux éditions Larivière.
+				« La voile est un truc tellement addictif », avance Cédric qui n’a,
+				jusqu’alors, jamais vraiment fait de solitaire et encore moins traversé
+				l’<nomgeo>Atlantique</nomgeo>. « Cette Route du Rhum, c’est un vrai défi perso.
+				A priori, je suis l’archétype du mec qui n’est pas capable de faire un
+				truc pareil mais je veux me prouver que si. Je veux me prouver que je
+				suis capable de faire un truc extraordinaire, même si ça me fait
+				gravement flipper », s’amuse le skipper de Grizzly Barber Shop – Cabinet Z
+				qui espère aussi terminer premier Vintage.
+			</texte>
+		</skipper>
+	</voilier>
+</voiliers>

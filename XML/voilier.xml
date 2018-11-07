@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="Voiliers-v1.xsl"?>
+
+<voiliers>
+	<voilier>
+		<nom>SOS Pare-Brise</nom>
+		<annee>1992</annee>
+		<architecte>Gilles Vaton</architecte>
+		<longueur>14m</longueur>
+		<photo adresse="https://www.letelegramme.fr/images/2018/09/28/route-du-rhum-nicolas-magnan-rhum4you-javelot_4200069_219x330p.jpg?v=1"></photo>
+		<skipper>
+			<nom_skipper>Nicolas MAGNAN</nom_skipper>
+			<texte>
+				SOS Pare-Brise+ réalise une course dans la course au profit d’actions
+				humanitaires, environnementales, de la promotion de l’art et du
+				développement économique du territoire. Le goût du partage et de
+				l’aventure humaine dépassent la simple préparation de course au
+				profit de projets connexes.
+				Leurs acteurs transcendent le simple objectif de franchir la ligne
+				d’arrivée en tête,	et permettent à un plus large public de s’intéresser
+				à la voile, et amorcer une synergie fondée sur leurs valeurs partagées.
+				C’est au chantier de <nomgeo>Port Corbières</nomgeo>
+				(http://www.portmarseilleplaisancelevage.com) que Javelot 88 est préparé
+				par l’équipage 1RHUM4YOU, grâce aux infrastructures développées depuis
+				20 ans, et la synergie de compétences réunies sur place	autour du projet.
+				À l'abri des vents dominants, <nomgeo>Port Corbières</nomgeo> est le 1er
+				chantier naval de plaisance à <nomgeo>Marseille</nomgeo>,
+				traitant près de 5000 bateaux par an.
+			</texte>
+		</skipper>
+	</voilier>
+</voiliers>
