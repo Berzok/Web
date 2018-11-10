@@ -15,7 +15,7 @@ else
 <head>
 	<title>Résultats des évaluations</title>
 	<meta charset="UTF-8"/>
-	<link rel="stylesheet" href="votes.css"/>
+	<link rel="stylesheet" href="prof.css"/>
 </head>
 <body>
 	<div id="container">

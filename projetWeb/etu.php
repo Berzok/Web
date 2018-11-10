@@ -20,22 +20,37 @@ else
 <head>
 	<title>Évaluation des enseigmenets</title>
 	<meta charset="UTF-8"/>
-	<link rel="stylesheet" href="votes.css"/>
+	<?php
+		if(aVote($_SESSION['login']) == false)
+		{
+			echo "<link rel='stylesheet' href='etu.css'/>";
+		}
+		else
+		{
+			echo "<link rel='stylesheet' href='etu2.css'/>";
+		}
+	?>
 </head>
 <body>
-	<div id="container">
-		<div id="vote">
-			<?php
+	<div id='container'>
+		<?php
 			if(aVote($_SESSION['login']) == false)
 			{
+				echo "<div id='vote'>";
 				require_once("voteetu.php");
+				echo "</div>";
 			}
 			else
 			{
-				echo "a voté"; //A modifier: à la place, on affiche les données du vote
+				echo "<div id='affichage_vote'>";
+				echo "<h1>Vote effectué</h1>";
+				echo "<h3>Voici un tableau récapitulatif de votre vote.</h3>";
+				echo "<div id='sub'>";
+				afficherVote($_SESSION['login']);
+				echo "</div></div>";
+
 			}
-			?>
-		</div>
+		?>
 	</div>
 </body>
 </html>

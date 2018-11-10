@@ -7,6 +7,7 @@
 <body>
 
 	<?php
+		require_once('fonctions.php');
 		$ue="";
 		$compt_tsatis = 0;
 		$satis_satis = 0;
@@ -14,6 +15,8 @@
 		$compt_mecon = 0;
 		$compt_tmecon = 0;
 		
+
+
 		$dir_name = "votes/"; //Nom du dossier contenant les fichiers csv
 
 		$dir = opendir($dir_name); //Ouverture du dossier
@@ -29,24 +32,23 @@
 					$t = fgetcsv($pointeur, 1024, ","); //Récupération des données d'un fichier
 					if(is_array($t))
 					{
-						
 						if($role=="prof01")
 						{
 							$ue="mathématiques";
 							switch($t[0]) {
-								case 'tsatis':
+								case 'tres_satisfait':
 									$compt_tsatis += 1;
 									break;
-								case 'satis':
+								case 'satisfait':
 									$satis_satis += 1;
 									break;
-								case 'meh':
+								case 'moyen':
 									$compt_meh += 1;
 									break;
-								case 'mecon':
+								case 'mecontent':
 									$compt_mecon += 1;
 									break;
-								case 'tmecon':
+								case 'tres_mecontent':
 									$compt_tmecon += 1;
 									break;
 							}
@@ -56,19 +58,19 @@
 						{
 							$ue="anglais";
 							switch($t[1]) {
-								case 'tsatis':
+								case 'tres_satisfait':
 									$compt_tsatis += 1;
 									break;
-								case 'satis':
+								case 'satisfait':
 									$satis_satis += 1;
 									break;
-								case 'meh':
+								case 'moyen':
 									$compt_meh += 1;
 									break;
-								case 'mecon':
+								case 'mecontent':
 									$compt_mecon += 1;
 									break;
-								case 'tmecon':
+								case 'tres_mecontent':
 									$compt_tmecon += 1;
 									break;
 							}
@@ -78,19 +80,19 @@
 						{
 							$ue="programmation";
 							switch($t[2]) {
-								case 'tsatis':
+								case 'tres_satisfait':
 									$compt_tsatis += 1;
 									break;
-								case 'satis':
+								case 'satisfait':
 									$satis_satis += 1;
 									break;
-								case 'meh':
+								case 'moyen':
 									$compt_meh += 1;
 									break;
-								case 'mecon':
+								case 'mecontent':
 									$compt_mecon += 1;
 									break;
-								case 'tmecon':
+								case 'tres_mecontent':
 									$compt_tmecon += 1;
 									break;
 							}
@@ -100,19 +102,19 @@
 						{
 							$ue="algorithmique";
 							switch($t[3]) {
-								case 'tsatis':
+								case 'tres_satisfait':
 									$compt_tsatis += 1;
 									break;
-								case 'satis':
+								case 'satisfait':
 									$satis_satis += 1;
 									break;
-								case 'meh':
+								case 'moyen':
 									$compt_meh += 1;
 									break;
-								case 'mecon':
+								case 'mecontent':
 									$compt_mecon += 1;
 									break;
-								case 'tmecon':
+								case 'tres_mecontent':
 									$compt_tmecon += 1;
 									break;
 							}
@@ -120,21 +122,21 @@
 						
 						if($role=="prof05")
 						{
-							$ue="economie";
+							$ue="économie";
 							switch($t[4]) {
-								case 'tsatis':
+								case 'tres_satisfait':
 									$compt_tsatis += 1;
 									break;
-								case 'satis':
+								case 'satisfait':
 									$satis_satis += 1;
 									break;
-								case 'meh':
+								case 'moyen':
 									$compt_meh += 1;
 									break;
-								case 'mecon':
+								case 'mecontent':
 									$compt_mecon += 1;
 									break;
-								case 'tmecon':
+								case 'tres_mecontent':
 									$compt_tmecon += 1;
 									break;
 							}
@@ -146,16 +148,33 @@
 			}
 		}
 		closedir($dir); //Fermeture du dossier
-		echo "<div id='description'>";
-		echo "<br><fieldset>";
-		echo "<legend>"."Résultats pour l'ue ".$ue."</legend>";
-		echo $compt_tsatis." Très satisfait<br>";
-		echo $satis_satis." Satisfait<br>";
-		echo $compt_meh." Moyen<br>";
-		echo $compt_mecon." Mécontent<br>";
-		echo $compt_tmecon." Très mécontent<br>";
-		echo "</fieldset><br>";
-		echo "</div>";
+
+
+
+		/*Affichage du nombres de votes pour chaque appréciation
+		dans un tableau récapitulatif*/
+		echo "<div id='container'><div id='affichage_vote'>";
+
+		echo "<h1>Votes des étudiants";
+
+		echo "<h3>Ici, vous pouvez voir le nombre de votes par appréciation que les étudiants ont attribués à votre UE.</h3>";
+
+		echo "<div id='sub'>";
+
+		echo "<table border='1' cellpadding='10px'>";
+
+		echo "<th colspan='2'>Résultats des votes pour l'UE ".$ue."</th>";
+		echo "<tr><td class='description'>Appréciation</td><td class='description'>Nombre de votes</td></tr>";
+		echo "<tr><td class='appreciation'>Très satisfait<td>".$compt_tsatis."</td></tr>";
+		echo "<tr><td class='appreciation'>Satisfait<td>".$satis_satis."</td></tr>";
+		echo "<tr><td class='appreciation'>Moyen<td>".$compt_meh."</td></tr>";
+		echo "<tr><td class='appreciation'>Mécontent<td>".$compt_mecon."</td></tr>";
+		echo "<tr><td class='appreciation'>Très mécontent<td>".$compt_tmecon."</td></tr>";
+
+		echo "</table>";
+
+		echo "</div></div></div>";
+		
 	?>
 	
 </body>
