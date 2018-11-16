@@ -52,11 +52,7 @@
 				</xsl:attribute>
 				<xsl:value-of	select="@nom"/>
 			</a>
-		</h2>
-		<h2 id="{@nom}">
-			
-		</h2>
-			
+		</h2>		
 		
 		
 	</xsl:template>
@@ -64,9 +60,22 @@
 	
 	
 	<xsl:template	match="classe">
-		<h2><xsl:value-of	select="@nom"/></h2>
+		<h2 id="{@nom}">
+			<xsl:value-of	select="@nom"/>
+		</h2>
 		<xsl:value-of	select="descriptif"/>
+		<xsl:apply-templates	select="voiliers/voilier"/>
+		
+		<xsm:apply-templates	
+		
 	</xsl:template>
 	
+	<xsl:template	match="voilier">
+		<h4>
+			<a href="">
+				<xsl:value-of	select="."/>
+			</a>
+		</h4>
+	</xsl:template>
 	
 </xsl:stylesheet>

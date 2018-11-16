@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="application/xml" href="Transat.xsl"?>
 
+<?xml-stylesheet type="application/xml" href="Transat.xsl"?>
 
 <!DOCTYPE  transat  SYSTEM "Transat.dtd"
 [
@@ -199,7 +199,7 @@ sont engagés cette année.
 	  </voiliers>		
 	</classe>
 	<classe nom="RhumMono">
-		<descriptif> La catégorie des Rhum Mono est 
+	  <descriptif> La catégorie des Rhum Mono est 
 réservée  aux  monocoques  d’une  longueur  supérieure  ou  
 égale  à  39  pieds  et  ne  pouvant  entrer  dans  aucune  autre  
 classe.  17  solitaires  ont  choisi  de  s’y  engager  avec  pour  

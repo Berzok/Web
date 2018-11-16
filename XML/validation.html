@@ -1,0 +1,26 @@
+<HTML>
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<hr><fieldset><legend> La DTD </legend><table width='200'>
+	<form name='verif' action='dtd.php' method='post' enctype="multipart/form-data">
+	<tr>
+		<td>
+			Nom du fichier à vérifier
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="hidden" name="MAX_FILE_SIZE" value="300000">
+			<input type="file" name="myfile" id='UploadedFile' required />
+		</td>
+	
+	</tr>
+	<tr>
+		<td>
+			<input name='ok' type='submit' value='Envoyer'>
+		</td>
+	</tr>
+</HTML>
