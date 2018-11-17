@@ -8,6 +8,7 @@ if((!isset($_SESSION['login']) or !isset($_SESSION['role'])) or ($_SESSION['role
 else
 {
 	require_once('header.php');
+	require_once('fonctions.php');
 }
 ?>
 
@@ -15,14 +16,23 @@ else
 <head>
 	<title>Résultats des évaluations</title>
 	<meta charset="UTF-8"/>
-	<link rel="stylesheet" href="votes.css"/>
+	<link rel="stylesheet" href="prof.css"/>
 </head>
 <body>
 	<div id="container">
 		<div id="vote">
-			<?php
-				require_once("resultat.php");
-			?>
+			<div id="affichage_vote">
+				<?php
+					if(existenceVotes() == false)
+					{
+						require_once('empty.php');
+					}
+					else
+					{
+						require_once("resultat.php");
+					}
+				?>
+			</div>
 		</div>
 	</div>
 </body>

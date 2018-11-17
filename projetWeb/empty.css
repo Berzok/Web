@@ -1,0 +1,43 @@
+#recap_vote
+{
+	width: 1200px;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	border-radius: 10px;
+	position: relative;
+	font-family: Calibri;
+}
+
+#container
+{
+	min-height: 800px;
+	margin-top: 400px;
+	margin-bottom: 45px;
+}
+
+
+#affichage_vote h1
+{
+	text-align: center;
+	padding-top: 20px;
+}
+
+#avertissement
+{
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+
+fieldset
+{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	border-color: black;
+	border-style: solid;
+	border-width: 3px;
+}
