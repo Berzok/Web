@@ -10,10 +10,11 @@ setcookie("cookie", "php5");
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
-<div id="header-content">
+	<div id="header-content">
 		<a id="home" href="index.php"><h1 id="titre">Évaluation des enseignements</h1></a>
-</div>
-<div id="form-container">
+	</div>
+	
+	<div id="form-container">
 	<form action='' method='post'<tr>
 		<img id="logo" src="pics/logo.png"/>
 		<br/>
@@ -30,7 +31,7 @@ setcookie("cookie", "php5");
 		}
 		?>
 	</form>
-</div>
+	</div>
 </body>
 </html>
 <?php

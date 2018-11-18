@@ -18,7 +18,7 @@ else
 
 <html lang="fr">
 <head>
-	<title>Évaluation des enseigmenets</title>
+	<title>Évaluation des enseignements</title>
 	<meta charset="UTF-8"/>
 	<?php
 		if(aVote($_SESSION['login']) == false)
