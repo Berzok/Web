@@ -1,3 +1,10 @@
+<html>
+<head>
+	<link rel='stylesheet' href='admin.css'/>
+</head>
+</html>
+	
+
 
 	<?php
 		
@@ -375,6 +382,7 @@
 		
 		foreach($lesVotes as $matiere => $nom)
 			{
+			echo "<br />";
 			display_ue($matiere, $nom);
 			}
 		
