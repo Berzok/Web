@@ -13,7 +13,7 @@
 		
 		function dechiffrer($y)
 				{
-				$y = intval($y);
+				$y = round($y, 0, PHP_ROUND_HALF_UP);
 				switch($y)
 					{
 					case(4):
@@ -56,7 +56,7 @@
 						$value += 3;
 						$compteur++;
 						break;
-					case "moyen":
+					case "mitige":
 						$value += 2;
 						$compteur++;
 						break;
@@ -82,12 +82,12 @@
 			return sqrt(array_sum(array_map("sd_square", $array, array_fill(0,count($array), (array_sum($array) / count($array)) ) ) ) / (count($array)) );
 			} 
 		
-		function ecart_type2(array $a, $sample = false)
+		function ecart_type2(array $x, $sample = false)
 			{
-			$n = count($a);
-			$mean = array_sum($a) / $n;
+			$n = count($x);
+			$mean = array_sum($x) / $n;
 			$carry = 0.0;
-			foreach ($a as $val)
+			foreach ($x as $val)
 				{
 				$d = ((double) $val) - $mean;
 				$carry += $d * $d;
@@ -96,7 +96,7 @@
 				{
 			   --$n;
 				}
-			return (sqrt($carry / $n));
+			return round(sqrt($carry/$n), 2, PHP_ROUND_HALF_UP);
 			}
 			
 		function ecart_type($x)
@@ -120,7 +120,7 @@
 						$value += 3;
 						$compteur++;
 						break;
-					case "moyen":
+					case "mitige":
 						$value += 2;
 						$compteur++;
 						break;
@@ -145,12 +145,12 @@
 			echo "<legend>"."Résultats pour l'UE ".$ue."</legend>";
 			echo $x["tres_satisfait"]." Très satisfait<br>";
 			echo $x["satisfait"]." Satisfait<br>";
-			echo $x["moyen"]." Moyen<br>";
+			echo $x["mitige"]." Mitigé<br>";
 			echo $x["mecontent"]." Mécontent<br>";
 			echo $x["tres_mecontent"]." Très mécontent<br>";
 			echo "<br>";
-			print_r("Dans l'ensemble, les élèves sont ". dechiffrer(moyenne($x)) .".<br>");
-			print_r("L'écart-type est de  ". ecart_type($x));
+			print_r("En moyenne, les élèves sont ". dechiffrer(moyenne($x)) .".<br>");
+			print_r("La dispersion autour de la moyenne (écart-type) est de ". ecart_type($x));
 			echo "</fieldset><br>";
 			echo "</div>";
 			}
@@ -162,7 +162,7 @@
 		$notes_maths = array(
 			"tres_satisfait" => 0,
 			"satisfait" => 0,
-			"moyen" => 0,
+			"mitige" => 0,
 			"mecontent" => 0,
 			"tres_mecontent" => 0,
 			);
@@ -170,7 +170,7 @@
 		$notes_anglais = array(
 			"tres_satisfait" => 0,
 			"satisfait" => 0,
-			"moyen" => 0,
+			"mitige" => 0,
 			"mecontent" => 0,
 			"tres_mecontent" => 0,
 			);
@@ -178,7 +178,7 @@
 		$notes_prog = array(
 			"tres_satisfait" => 0,
 			"satisfait" => 0,
-			"moyen" => 0,
+			"mitige" => 0,
 			"mecontent" => 0,
 			"tres_mecontent" => 0,
 			);
@@ -186,7 +186,7 @@
 		$notes_algo = array(
 			"tres_satisfait" => 0,
 			"satisfait" => 0,
-			"moyen" => 0,
+			"mitige" => 0,
 			"mecontent" => 0,
 			"tres_mecontent" => 0,
 			);
@@ -194,7 +194,7 @@
 		$notes_eco = array(
 			"tres_satisfait" => 0,
 			"satisfait" => 0,
-			"moyen" => 0,
+			"mitige" => 0,
 			"mecontent" => 0,
 			"tres_mecontent" => 0,
 			);
@@ -211,7 +211,7 @@
 		
 		$compt_tres_satisfait = 0;
 		$satisfait_satisfait = 0;
-		$compt_moyen = 0;
+		$compt_mitige = 0;
 		$compt_mecontent = 0;
 		$compt_tres_mecontent = 0;
 		
@@ -243,9 +243,9 @@
 									$lesVotes[$ue]["$t[0]"] += 1;
 									$satisfait_satisfait += 1;
 									break;
-								case 'moyen':
+								case 'mitige':
 									$lesVotes[$ue]["$t[0]"] += 1;
-									$compt_moyen += 1;
+									$compt_mitige += 1;
 									break;
 								case 'mecontent':
 									$lesVotes[$ue]["$t[0]"] += 1;
@@ -269,9 +269,9 @@
 									$lesVotes[$ue]["$t[1]"] += 1;
 									$satisfait_satisfait += 1;
 									break;
-								case 'moyen':
+								case 'mitige':
 									$lesVotes[$ue]["$t[1]"] += 1;
-									$compt_moyen += 1;
+									$compt_mitige += 1;
 									break;
 								case 'mecontent':
 									$lesVotes[$ue]["$t[1]"] += 1;
@@ -295,9 +295,9 @@
 									$lesVotes[$ue]["$t[2]"] += 1;
 									$satisfait_satisfait += 1;
 									break;
-								case 'moyen':
+								case 'mitige':
 									$lesVotes[$ue]["$t[2]"] += 1;
-									$compt_moyen += 1;
+									$compt_mitige += 1;
 									break;
 								case 'mecontent':
 									$lesVotes[$ue]["$t[2]"] += 1;
@@ -321,9 +321,9 @@
 									$lesVotes[$ue]["$t[3]"] += 1;
 									$satisfait_satisfait += 1;
 									break;
-								case 'moyen':
+								case 'mitige':
 									$lesVotes[$ue]["$t[3]"] += 1;
-									$compt_moyen += 1;
+									$compt_mitige += 1;
 									break;
 								case 'mecontent':
 									$lesVotes[$ue]["$t[3]"] += 1;
@@ -347,9 +347,9 @@
 									$lesVotes[$ue]["$t[4]"] += 1;
 									$satisfait_satisfait += 1;
 									break;
-								case 'moyen':
+								case 'mitige':
 									$lesVotes[$ue]["$t[4]"] += 1;
-									$compt_moyen += 1;
+									$compt_mitige += 1;
 									break;
 								case 'mecontent':
 									$lesVotes[$ue]["$t[4]"] += 1;

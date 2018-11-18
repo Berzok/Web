@@ -11,7 +11,7 @@
 
 				<input type="radio" name="math" value="tres_mecontent" required> Très mécontent<br>
 				<input type="radio" name="math" value="mecontent"> Mécontent<br>
-				<input type="radio" name="math" value="moyen"> Moyen<br>
+				<input type="radio" name="math" value="mitige"> Mitigé<br>
 				<input type="radio" name="math" value="satisfait"> Satisfait<br>
 				<input type="radio" name="math" value="tres_satisfait"> Très satisfait<br>
 
@@ -22,7 +22,7 @@
 
 				<input type="radio" name="anglais" value="tres_mecontent" required> Très mécontent<br>
 				<input type="radio" name="anglais" value="mecontent"> Mécontent<br>
-				<input type="radio" name="anglais" value="moyen"> Moyen<br>
+				<input type="radio" name="anglais" value="mitige"> Mitigé<br>
 				<input type="radio" name="anglais" value="satisfait"> Satisfait<br>
 				<input type="radio" name="anglais" value="tres_satisfait"> Très satisfait<br>
 
@@ -34,7 +34,7 @@
 
 				<input type="radio" name="prog" value="tres_mecontent" required> Très mécontent<br>
 				<input type="radio" name="prog" value="mecontent"> Mécontent<br>
-				<input type="radio" name="prog" value="moyen"> Moyen<br>
+				<input type="radio" name="prog" value="mitige"> Mitigé<br>
 				<input type="radio" name="prog" value="satisfait"> Satisfait<br>
 				<input type="radio" name="prog" value="tres_satisfait"> Très satisfait<br>
 
@@ -45,7 +45,7 @@
 			
 				<input type="radio" name="algo" value="tres_mecontent" required> Très mécontent<br>
 				<input type="radio" name="algo" value="mecontent"> Mécontent<br>
-				<input type="radio" name="algo" value="moyen"> Moyen<br>
+				<input type="radio" name="algo" value="mitige"> Mitigé<br>
 				<input type="radio" name="algo" value="satisfait"> Satisfait<br>
 				<input type="radio" name="algo" value="tres_satisfait"> Très satisfait<br>
 
@@ -56,7 +56,7 @@
 
 				<input type="radio" name="eco" value="tres_mecontent" required> Très mécontent<br/>
 				<input type="radio" name="eco" value="mecontent"> Mécontent<br>
-				<input type="radio" name="eco" value="moyen"> Moyen<br>
+				<input type="radio" name="eco" value="mitige"> Mitigé<br>
 				<input type="radio" name="eco" value="satisfait"> Satisfait<br>
 				<input type="radio" name="eco" value="tres_satisfait"> Très satisfait<br>
 		</fieldset>

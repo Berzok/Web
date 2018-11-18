@@ -71,7 +71,7 @@ function reecriture($appreciation)
 			$appreciation = "Mécontent(e)";
 			break;
 
-		case "moyen":
+		case "mitige":
 			$appreciation = "Moyen";
 			break;
 

@@ -4,7 +4,10 @@
 	
 	require_once('fonctions.php');
 
+	
+	//Localisation des fichiers de vote
 	$file = "votes/vote-";
+	
 	
 	$login = $_SESSION["login"];
 	$maths = $_POST["math"];
