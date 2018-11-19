@@ -33,6 +33,9 @@ setcookie("cookie", "php5");
 	</form>
 	</div>
 </body>
+<?php
+	require_once('footer.php');
+?>
 </html>
 <?php
 session_start();

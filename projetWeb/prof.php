@@ -19,6 +19,7 @@ else
 	<link rel="stylesheet" href="prof.css"/>
 </head>
 <body>
+
 	<div id="container">
 		<div id="vote">
 			<div id="affichage_vote">
@@ -36,4 +37,7 @@ else
 		</div>
 	</div>
 </body>
+<?php
+	require_once('footer.php');
+?>
 </html>

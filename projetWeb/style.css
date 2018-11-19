@@ -50,7 +50,7 @@
 	text-align: right;
 }
 
-#menu a,p
+#hello, #sep, #logout
 {
 	display: inline-block;
 	margin-top: 20px;
@@ -86,4 +86,35 @@ html
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+}
+
+footer
+{
+    background-color: #191919;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 5%;
+    height: 65px;
+}
+
+footer a
+{
+    text-decoration: none;
+    font-family: Calibri;
+    color: white;
+}
+
+footer a:hover
+{
+    color: #FE3838;
+    transition-duration: 0.5s;
+}
+
+#copyright
+{
+    text-align: center;
+    margin-right: 30px;
+    margin-top: 21.5px;
+    font-size: 18px;
 }
