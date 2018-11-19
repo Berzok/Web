@@ -16,7 +16,7 @@ setcookie("cookie", "php5");
 	
 	<div id="form-container">
 	<form action='' method='post'<tr>
-		<img id="logo" src="pics/logo.png"/>
+		<a href="http://www.iut-velizy.uvsq.fr/"><img id="logo" src="pics/logo.png"/></a>
 		<br/>
 		<h1>Connexion</h1>
 		<label><b>Nom d'utilisateur</b></label><input name='nom' type='text' required />

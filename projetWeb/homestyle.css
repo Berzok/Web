@@ -35,6 +35,12 @@ footer
     right: 0;
     margin-top: 5%;
     height: 65px;
+    z-index: 999;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(0);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2), 20px 5px 5px 0 rgba(0, 0, 0, 0.24);
+    transition: all 2.5s ease;
 }
 
 footer a
