@@ -1,0 +1,59 @@
+#affichage_vote
+{
+	width: 1200px;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	border-radius: 10px;
+	position: relative;
+	font-family: Calibri;
+}
+
+#sub
+{
+	width: 1200px;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 50px;
+}
+
+
+#affichage_vote h1
+{
+	text-align: center;
+	padding-top: 20px;
+}
+
+#affichage_vote h3
+{
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 40px;
+}
+
+#container
+{
+	min-height: 460px;
+	margin-top: 400px;
+	margin-bottom: 45px;
+}
+
+table
+{
+	border-collapse: collapse;
+	width: 90%;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	font-family: Calibri;
+	text-align: center;
+}
+
+table th
+{
+	background-color: rgb(52,52,52);
+	color: white;
+}
