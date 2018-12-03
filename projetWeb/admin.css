@@ -28,16 +28,17 @@
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
 	position: fixed;
-	top: 38%;
+	top: 39%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 .icon-bar i {
+	position: absolute;
 	display: block;
 	text-align: center;
 	padding: 10px;
-	margin-left: 75px;
+	margin-left: 70px;
 	transition: all 2s ease;
 	color: red;
 	font-size: 45px;
@@ -45,7 +46,7 @@
 .icon-bar input {
 	display: block;
 	text-align: center;
-	margin-left: 75px;
+	margin-left: 57px;
 	transition: all 2s ease;
 	border-width: 2px;
 	border-color: red;

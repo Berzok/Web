@@ -28,16 +28,6 @@ else
 	<link rel="stylesheet" href="admin.css"/>
 </head>
 
-<body>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<div class="icon-bar">
-		<form action="pdf.php" method="POST">
-		<i class="fa fa-file-pdf-o"></i>
-		<input type="submit" value="Version PDF" class="pdf">
-	</div>
-</body>
-
 	<div id="container">
 		<div id="recap_vote">
 			<div id="affichage_vote">

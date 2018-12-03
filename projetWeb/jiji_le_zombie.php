@@ -1,22 +1,10 @@
 <html>
+
 <head>
-	<link rel='stylesheet' href='admin.css'/>
+<link rel="stylesheet" href="votes.css"/>
 </head>
 
-
 <body>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<div class="icon-bar">
-		<form action="pdf.php" method="POST">
-		<i class="fa fa-file-pdf-o"></i>
-		<br /><br /><br /><br />
-		<input type="submit" value="Version PDF" class="pdf">
-	</div>
-</body>
-</html>
-	
-
 
 	<?php
 		
@@ -32,7 +20,7 @@
 		
 		function dechiffrer($y)
 				{
-				$y = round($y, 0, PHP_ROUND_HALF_UP);
+				$y = intval($y);
 				switch($y)
 					{
 					case(4):
@@ -67,23 +55,23 @@
 				$value = 0;
 				switch($nom)
 					{
-					case "tres_satisfait":
+					case "tsatis":
 						$value += 4;
 						$compteur++;
 						break;
-					case "satisfait":
+					case "satis":
 						$value += 3;
 						$compteur++;
 						break;
-					case "mitige":
+					case "meh":
 						$value += 2;
 						$compteur++;
 						break;
-					case "mecontent":
+					case "mecon":
 						$value += 1;
 						$compteur++;
 						break;
-					case "tres_mecontent":
+					case "tmecon":
 						$value += 0;
 						$compteur++;
 						break;
@@ -101,12 +89,12 @@
 			return sqrt(array_sum(array_map("sd_square", $array, array_fill(0,count($array), (array_sum($array) / count($array)) ) ) ) / (count($array)) );
 			} 
 		
-		function ecart_type2(array $x, $sample = false)
+		function ecart_type2(array $a, $sample = false)
 			{
-			$n = count($x);
-			$mean = array_sum($x) / $n;
+			$n = count($a);
+			$mean = array_sum($a) / $n;
 			$carry = 0.0;
-			foreach ($x as $val)
+			foreach ($a as $val)
 				{
 				$d = ((double) $val) - $mean;
 				$carry += $d * $d;
@@ -115,7 +103,7 @@
 				{
 			   --$n;
 				}
-			return round(sqrt($carry/$n), 2, PHP_ROUND_HALF_UP);
+			return (sqrt($carry / $n));
 			}
 			
 		function ecart_type($x)
@@ -131,23 +119,23 @@
 				$value = 0;
 				switch($nom)
 					{
-					case "tres_satisfait":
+					case "tsatis":
 						$value += 4;
 						$compteur++;
 						break;
-					case "satisfait":
+					case "satis":
 						$value += 3;
 						$compteur++;
 						break;
-					case "mitige":
+					case "meh":
 						$value += 2;
 						$compteur++;
 						break;
-					case "mecontent":
+					case "mecon":
 						$value += 1;
 						$compteur++;
 						break;
-					case "tres_mecontent":
+					case "tmecon":
 						$value += 0;
 						$compteur++;
 						break;
@@ -159,17 +147,17 @@
 	
 		function display_ue($ue, $x)
 			{
-			echo "<div class='description'>";
+			echo "<div id='description'>";
 			echo "<br><fieldset>";
-			echo "<legend>"."Résultats pour l'UE ".$ue."</legend>";
-			echo $x["tres_satisfait"]." Très satisfait<br>";
-			echo $x["satisfait"]." Satisfait<br>";
-			echo $x["mitige"]." Mitigé<br>";
-			echo $x["mecontent"]." Mécontent<br>";
-			echo $x["tres_mecontent"]." Très mécontent<br>";
+			echo "<legend>"."Résultats pour l'ue ".$ue."</legend>";
+			echo $x["tsatis"]." Très satisfait<br>";
+			echo $x["satis"]." Satisfait<br>";
+			echo $x["meh"]." Moyen<br>";
+			echo $x["mecon"]." Mécontent<br>";
+			echo $x["tmecon"]." Très mécontent<br>";
 			echo "<br>";
-			print_r("En moyenne, les élèves sont ". dechiffrer(moyenne($x)) .".<br>");
-			print_r("La dispersion autour de la moyenne (écart-type) est de ". ecart_type($x));
+			print_r("Dans l'ensemble, les élèves sont ". dechiffrer(moyenne($x)) .".<br>");
+			print_r("L'écart-type est de  ". ecart_type($x));
 			echo "</fieldset><br>";
 			echo "</div>";
 			}
@@ -179,60 +167,60 @@
 		$ue="";
 		
 		$notes_maths = array(
-			"tres_satisfait" => 0,
-			"satisfait" => 0,
-			"mitige" => 0,
-			"mecontent" => 0,
-			"tres_mecontent" => 0,
+			"tsatis" => 0,
+			"satis" => 0,
+			"meh" => 0,
+			"mecon" => 0,
+			"tmecon" => 0,
 			);
 			
 		$notes_anglais = array(
-			"tres_satisfait" => 0,
-			"satisfait" => 0,
-			"mitige" => 0,
-			"mecontent" => 0,
-			"tres_mecontent" => 0,
+			"tsatis" => 0,
+			"satis" => 0,
+			"meh" => 0,
+			"mecon" => 0,
+			"tmecon" => 0,
 			);
 		
 		$notes_prog = array(
-			"tres_satisfait" => 0,
-			"satisfait" => 0,
-			"mitige" => 0,
-			"mecontent" => 0,
-			"tres_mecontent" => 0,
+			"tsatis" => 0,
+			"satis" => 0,
+			"meh" => 0,
+			"mecon" => 0,
+			"tmecon" => 0,
 			);
 		
 		$notes_algo = array(
-			"tres_satisfait" => 0,
-			"satisfait" => 0,
-			"mitige" => 0,
-			"mecontent" => 0,
-			"tres_mecontent" => 0,
+			"tsatis" => 0,
+			"satis" => 0,
+			"meh" => 0,
+			"mecon" => 0,
+			"tmecon" => 0,
 			);
 			
 		$notes_eco = array(
-			"tres_satisfait" => 0,
-			"satisfait" => 0,
-			"mitige" => 0,
-			"mecontent" => 0,
-			"tres_mecontent" => 0,
+			"tsatis" => 0,
+			"satis" => 0,
+			"meh" => 0,
+			"mecon" => 0,
+			"tmecon" => 0,
 			);
 
 		
 		$lesVotes = array(
-			"mathématiques" => $notes_maths,
+			"maths" => $notes_maths,
 			"anglais" => $notes_anglais,
-			"programmation" => $notes_prog,
-			"algorithmique" => $notes_algo,
-			"économie" => $notes_eco,
+			"prog" => $notes_prog,
+			"algo" => $notes_algo,
+			"eco" => $notes_eco,
 			);
 		
 		
-		$compt_tres_satisfait = 0;
-		$satisfait_satisfait = 0;
-		$compt_mitige = 0;
-		$compt_mecontent = 0;
-		$compt_tres_mecontent = 0;
+		$compt_tsatis = 0;
+		$satis_satis = 0;
+		$compt_meh = 0;
+		$compt_mecon = 0;
+		$compt_tmecon = 0;
 		
 		$dir_name = "votes/"; //Nom du dossier contenant les fichiers csv
 
@@ -251,28 +239,28 @@
 					{
 						
 
-							$ue="mathématiques";
+							$ue="maths";
 							switch($t[0])
 								{
-								case 'tres_satisfait':
+								case 'tsatis':
 									$lesVotes[$ue]["$t[0]"] += 1;
-									$compt_tres_satisfait += 1;
+									$compt_tsatis += 1;
 									break;
-								case 'satisfait':
+								case 'satis':
 									$lesVotes[$ue]["$t[0]"] += 1;
-									$satisfait_satisfait += 1;
+									$satis_satis += 1;
 									break;
-								case 'mitige':
+								case 'meh':
 									$lesVotes[$ue]["$t[0]"] += 1;
-									$compt_mitige += 1;
+									$compt_meh += 1;
 									break;
-								case 'mecontent':
+								case 'mecon':
 									$lesVotes[$ue]["$t[0]"] += 1;
-									$compt_mecontent += 1;
+									$compt_mecon += 1;
 									break;
-								case 'tres_mecontent':
+								case 'tmecon':
 									$lesVotes[$ue]["$t[0]"] += 1;
-									$compt_tres_mecontent += 1;
+									$compt_tmecon += 1;
 									break;
 								}
 						
@@ -280,103 +268,103 @@
 							$ue="anglais";
 							switch($t[1])
 								{
-								case 'tres_satisfait':
+								case 'tsatis':
 									$lesVotes[$ue]["$t[1]"] += 1;
-									$compt_tres_satisfait += 1;
+									$compt_tsatis += 1;
 									break;
-								case 'satisfait':
+								case 'satis':
 									$lesVotes[$ue]["$t[1]"] += 1;
-									$satisfait_satisfait += 1;
+									$satis_satis += 1;
 									break;
-								case 'mitige':
+								case 'meh':
 									$lesVotes[$ue]["$t[1]"] += 1;
-									$compt_mitige += 1;
+									$compt_meh += 1;
 									break;
-								case 'mecontent':
+								case 'mecon':
 									$lesVotes[$ue]["$t[1]"] += 1;
-									$compt_mecontent += 1;
+									$compt_mecon += 1;
 									break;
-								case 'tres_mecontent':
+								case 'tmecon':
 									$lesVotes[$ue]["$t[1]"] += 1;
-									$compt_tres_mecontent += 1;
+									$compt_tmecon += 1;
 									break;
 								}
 
 							
-							$ue="programmation";
+							$ue="prog";
 							switch($t[2])
 								{
-								case 'tres_satisfait':
+								case 'tsatis':
 									$lesVotes[$ue]["$t[2]"] += 1;
-									$compt_tres_satisfait += 1;
+									$compt_tsatis += 1;
 									break;
-								case 'satisfait':
+								case 'satis':
 									$lesVotes[$ue]["$t[2]"] += 1;
-									$satisfait_satisfait += 1;
+									$satis_satis += 1;
 									break;
-								case 'mitige':
+								case 'meh':
 									$lesVotes[$ue]["$t[2]"] += 1;
-									$compt_mitige += 1;
+									$compt_meh += 1;
 									break;
-								case 'mecontent':
+								case 'mecon':
 									$lesVotes[$ue]["$t[2]"] += 1;
-									$compt_mecontent += 1;
+									$compt_mecon += 1;
 									break;
-								case 'tres_mecontent':
+								case 'tmecon':
 									$lesVotes[$ue]["$t[2]"] += 1;
-									$compt_tres_mecontent += 1;
+									$compt_tmecon += 1;
 									break;
 								}
 						
 
-							$ue="algorithmique";
+							$ue="algo";
 							switch($t[3])
 								{
-								case 'tres_satisfait':
+								case 'tsatis':
 									$lesVotes[$ue]["$t[3]"] += 1;
-									$compt_tres_satisfait += 1;
+									$compt_tsatis += 1;
 									break;
-								case 'satisfait':
+								case 'satis':
 									$lesVotes[$ue]["$t[3]"] += 1;
-									$satisfait_satisfait += 1;
+									$satis_satis += 1;
 									break;
-								case 'mitige':
+								case 'meh':
 									$lesVotes[$ue]["$t[3]"] += 1;
-									$compt_mitige += 1;
+									$compt_meh += 1;
 									break;
-								case 'mecontent':
+								case 'mecon':
 									$lesVotes[$ue]["$t[3]"] += 1;
-									$compt_mecontent += 1;
+									$compt_mecon += 1;
 									break;
-								case 'tres_mecontent':
+								case 'tmecon':
 									$lesVotes[$ue]["$t[3]"] += 1;
-									$compt_tres_mecontent += 1;
+									$compt_tmecon += 1;
 									break;
 								}
 
 						
-							$ue="économie";
+							$ue="eco";
 							switch($t[4])
 								{
-								case 'tres_satisfait':
+								case 'tsatis':
 									$lesVotes[$ue]["$t[4]"] += 1;
-									$compt_tres_satisfait += 1;
+									$compt_tsatis += 1;
 									break;
-								case 'satisfait':
+								case 'satis':
 									$lesVotes[$ue]["$t[4]"] += 1;
-									$satisfait_satisfait += 1;
+									$satis_satis += 1;
 									break;
-								case 'mitige':
+								case 'meh':
 									$lesVotes[$ue]["$t[4]"] += 1;
-									$compt_mitige += 1;
+									$compt_meh += 1;
 									break;
-								case 'mecontent':
+								case 'mecon':
 									$lesVotes[$ue]["$t[4]"] += 1;
-									$compt_mecontent += 1;
+									$compt_mecon += 1;
 									break;
-								case 'tres_mecontent':
+								case 'tmecon':
 									$lesVotes[$ue]["$t[4]"] += 1;
-									$compt_tres_mecontent += 1;
+									$compt_tmecon += 1;
 									break;
 								}
 
@@ -394,9 +382,11 @@
 		
 		foreach($lesVotes as $matiere => $nom)
 			{
-			echo "<br />";
 			display_ue($matiere, $nom);
 			}
 		
 		
 	?>
+	
+</body>
+</html>

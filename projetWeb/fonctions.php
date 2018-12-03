@@ -15,6 +15,7 @@ function aVote($login)
 			if($file == $dir_name."vote-".$login.".csv")
 			{
 				$vote = true;
+				return $vote;
 			}
 		}
 		else
