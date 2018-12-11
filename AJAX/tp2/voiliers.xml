@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="Voiliers-v1.xsl"?>
+
+<voiliers>
+	<voilier>
+		<nom>SOS Pare-Brise</nom>
+		<annee>1992</annee>
+		<architecte>Gilles Vaton</architecte>
+		<longueur>14m</longueur>
+		<photo adresse="https://www.letelegramme.fr/images/2018/09/28/route-du-rhum-nicolas-magnan-rhum4you-javelot_4200069_219x330p.jpg?v=1"></photo>
+		<skipper>
+			<nom_skipper>Nicolas MAGNAN</nom_skipper>
+			<texte>
+				SOS Pare-Brise+ réalise une course dans la course au profit d’actions
+				humanitaires, environnementales, de la promotion de l’art et du
+				développement économique du territoire. Le goût du partage et de
+				l’aventure humaine dépassent la simple préparation de course au
+				profit de projets connexes.
+			</texte>
+		</skipper>
+	</voilier>
+	
+	<voilier>
+		<nom>Grizzly Barber Shop</nom>
+		<annee>2007</annee>
+		<architecte>Olivier Philippot</architecte>
+		<longueur>12m</longueur>
+		<photo adresse="https://static.routedurhum.com/s3fs-public/styles/medium/public/boats/Robin-Marais.Normandy-channel-race.depart.21.jpg?itok=XUZnglvx"></photo>
+		<skipper>
+			<nom_skipper>Cédric DE KERVENOAL</nom_skipper>
+			<texte>
+				Avocat à Paris, Cédric de Kervenoael a, de fait, une vie
+				professionnelle bien remplie, mais son CV nautique n’en demeure pas moins garni.
+				Jugez plutôt ; outre un titre de champion du RORC et un titre de champion
+				du monde corinthien (amateur) en Melges 24, le skipper a également à peu près
+				remporté tout ce qu’il est possible de gagner en Class8, au côté de
+				Jean-François Cruette.
+				« La voile est un truc tellement addictif », avance Cédric qui n’a,
+				jusqu’alors, jamais vraiment fait de solitaire et encore moins traversé
+				l’Atlantique. « Cette Route du Rhum, c’est un vrai défi
+				perso », s’amuse le skipper de Grizzly Barber Shop – Cabinet Z qui espère
+				aussi terminer premier Vintage.
+			</texte>
+		</skipper>
+	</voilier>
+</voiliers>
